@@ -36,8 +36,7 @@ Below are some screenshots showcasing the main features and UI of the Skin Care 
 ![Home Page](HOMESS.png)
 
 ### About Page
-<!-- Add a real screenshot if available -->
-[Go to About Page](ABOUTSS.png)
+![About us Page](ABOUTSS.png)
 
 ### Contact Page
 <!-- Add a real screenshot if available -->
