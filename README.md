@@ -38,9 +38,9 @@ Below are some screenshots showcasing the main features and UI of the Skin Care 
 ### About Page
 ![About us Page](ABOUTSS.png)
 
-### Contact Page
-<!-- Add a real screenshot if available -->
-[Go to Contact Page](Images/CONTECTSS.png)
+### Skinproblem types Page
+![Skin problem types page Page]1/SKINSS.png()
+
 
 ### Team Page
 <!-- Add a real screenshot if available -->
