@@ -39,44 +39,25 @@ Below are some screenshots showcasing the main features and UI of the Skin Care 
 ![About us Page](ABOUTSS.png)
 
 ### Skinproblem types Page
-![Skin problem types page Page]1/SKINSS.png()
+![Skinproblem types Page](SKINSS.png)
 
 
 ### Team Page
-<!-- Add a real screenshot if available -->
-[Go to Team Page](Images/TEAMSS.png)
+![Team Page](TEAMSS.png)
 
 ### Check Page
-<!-- Add a real screenshot if available -->
-[Go to Check Page](Images/CHECKSS.png)
-
-### Home1 Page
-<!-- Add a real screenshot if available -->
-<!-- No direct route found, add link if available -->
-
-### K Page
-<!-- Add a real screenshot if available -->
-[Go to K Page](http://localhost:5000/k)
-
-### Skin Page
-<!-- Add a real screenshot if available -->
-[Go to Skin Page](Images/SKINSS.png)
+![Check Page](CHECKSS.png)
 
 
 
-### Skin Type Prediction Example
-![Skin Type Result](Images/Normal.png)
-![Skin Type Result - Oily](Images/oily.png)
-![Skin Type Result - Dry](Images/dry.png)
-![Skin Type Result - Sensitive](Images/Sensitive.png)
 
-### Disease Prediction Example
-![Disease Prediction - Acne](Images/acne.png)
-![Disease Prediction - Result](Images/result.jpeg)
 
-> _You can replace these images with actual UI screenshots for more accurate documentation._
 
----
+
+
+
+
+
 
 ## Directory Structure
 ```
@@ -104,7 +85,7 @@ SKIN CARE/
 ## Setup & Installation
 1. **Clone the repository**
    ```bash
-   git clone <repo-url>
+   git clone <https://github.com/neel1112/skin_problem_detector.git>
    cd "SKIN CARE"
    ```
 2. **Install dependencies**
@@ -151,4 +132,4 @@ This project is for educational purposes. Please contact the authors for other u
 
 ## Contact
 - Email: xx@gmail.com
-- Location: Delhi, India
+- Location: Gujarat, India
