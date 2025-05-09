@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+
+      <owner>
+        <username>TrainingData</username>
+        <email/>
+      </owner>
+      
+      <labels>
+        <label>
+          <name>type_1</name>
+          <color>#a6e8c0</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>type_2</name>
+          <color>#921bbf</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>type_3</name>
+          <color>#f7b270</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>type_4</name>
+          <color>#e23cc1</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>type_5</name>
+          <color>#dfa6ae</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>type_6</name>
+          <color>#a65eb4</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>type_7</name>
+          <color>#16e2a4</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </task>
+    <dumped>2023-06-04 21:21:22.425876+00:00</dumped>
+  </meta>
+  <image id="0" name="images/eu.04a53e8d-0642-47ce-afed-0dce3d2e3b85.jpg" width="3120" height="4160">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="1" name="images/eu.12853114-0db0-472d-8e1d-8b6d6fa55a6e.jpg" width="3024" height="4032">
+    <tag label="type_5" source="manual">
+    </tag>
+  </image>
+  <image id="2" name="images/eu.1318656b-9b75-4e65-89e7-154aa2916ead.jpg" width="4080" height="1836">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+  <image id="3" name="images/eu.15cb7654-1f49-4f13-a500-8adb845e2284.jpg" width="3000" height="4000">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="4" name="images/eu.2377f98a-116a-496b-9274-441e9f41e2a7.jpg" width="1840" height="4000">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="5" name="images/eu.304b0061-3171-44e5-81cf-46660cf81ac9.jpg" width="3000" height="4000">
+    <tag label="type_3" source="manual">
+    </tag>
+  </image>
+  <image id="6" name="images/eu.4111e8fc-67a3-45d3-b58c-85d26d505902.jpg" width="1980" height="2640">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="7" name="images/eu.43b1f497-0c6e-4b66-9a04-3f2c46c643c3.jpg" width="3024" height="4032">
+    <tag label="type_6" source="manual">
+    </tag>
+  </image>
+  <image id="8" name="images/eu.474be754-9656-45e9-9827-4e159c43e7ec.jpg" width="3472" height="4624">
+    <tag label="type_5" source="manual">
+    </tag>
+  </image>
+  <image id="9" name="images/eu.47f46643-865c-448a-9cef-d4fb6b5e449c.jpg" width="3072" height="4096">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+  <image id="10" name="images/eu.4bd10bbd-4f5a-416c-9e90-5cec51286263.jpg" width="1616" height="3264">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="11" name="images/eu.5077c9d7-a510-4542-adf4-e7d01b018aa2.jpg" width="3000" height="4000">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="12" name="images/eu.517d6a91-8397-4b44-a798-16f49fcd27cd.jpg" width="3000" height="4000">
+    <tag label="type_5" source="manual">
+    </tag>
+  </image>
+  <image id="13" name="images/eu.5381a6d5-e0f5-46bc-a6fc-3c971b46c287.jpg" width="3880" height="5184">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="14" name="images/eu.53fe351a-e488-4b0f-9bcb-7709456b5bcb.jpg" width="3456" height="4608">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="15" name="images/eu.578daadb-caa8-4174-9ff6-4ebbcddfb052.jpg" width="2320" height="3088">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+  <image id="16" name="images/eu.5ae3325a-c319-4854-8a22-4d4a9963b333.jpg" width="4160" height="3120">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="17" name="images/eu.5b6f3f83-50aa-4683-8a0a-a73a3c1f9893.jpg" width="4624" height="2136">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="18" name="images/eu.5c83472f-bc98-4870-8901-65db88fed63a.jpg" width="3000" height="4000">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+  <image id="19" name="images/eu.5e72795f-8df1-4090-b07b-3540982ac3ea.jpg" width="2448" height="3264">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+  <image id="20" name="images/eu.63733eb1-8461-4a69-b378-2cb94e5d54df.jpg" width="3024" height="4032">
+    <tag label="type_3" source="manual">
+    </tag>
+  </image>
+  <image id="21" name="images/eu.6dfb8614-77bd-4e69-972e-a2f4e55c0ead.jpg" width="3024" height="4032">
+    <tag label="type_5" source="manual">
+    </tag>
+  </image>
+  <image id="22" name="images/eu.729c12a1-dacc-45a8-a321-096f5bfa7a55.jpg" width="3000" height="4000">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="23" name="images/eu.738dbc29-5bab-483c-b049-0c3c2af98ead.jpg" width="2448" height="3264">
+    <tag label="type_3" source="manual">
+    </tag>
+  </image>
+  <image id="24" name="images/eu.75e223df-b1e5-4ee0-8329-9ca2a61fdd0b.jpg" width="2472" height="3296">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="25" name="images/eu.76f3335b-6fda-4e2a-a332-650fde339ea2.jpg" width="3000" height="4000">
+    <tag label="type_3" source="manual">
+    </tag>
+  </image>
+  <image id="26" name="images/eu.7d913aa8-f4a2-418e-acfe-c3497062e75b.jpg" width="2736" height="3648">
+    <tag label="type_6" source="manual">
+    </tag>
+  </image>
+  <image id="27" name="images/eu.902da8c4-e34f-4fc8-8aa3-229f5dcd75fe.jpg" width="3472" height="4624">
+    <tag label="type_2" source="manual">
+    </tag>
+  </image>
+  <image id="28" name="images/eu.a2fae165-ba27-4d37-8832-54cf4ce16a64.jpg" width="3000" height="4000">
+    <tag label="type_5" source="manual">
+    </tag>
+  </image>
+  <image id="29" name="images/eu.a3fdadc5-2ae0-4f5d-968b-a72e98fa6052.jpg" width="2392" height="5184">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="30" name="images/eu.ab672995-8271-4a20-8dc6-93272e41d65f.jpg" width="3880" height="5184">
+    <tag label="type_3" source="manual">
+    </tag>
+  </image>
+  <image id="31" name="images/eu.aebd9c81-79a2-424b-ab2e-419af65adfcc.jpg" width="2472" height="3296">
+    <tag label="type_3" source="manual">
+    </tag>
+  </image>
+  <image id="32" name="images/eu.b297419e-9967-4674-984b-c00848cd4d38.jpg" width="3024" height="4032">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+  <image id="33" name="images/eu.c0ee855c-f906-43f6-81bf-360c3b72d9ed.jpg" width="3000" height="4000">
+    <tag label="type_6" source="manual">
+    </tag>
+  </image>
+  <image id="34" name="images/eu.c12cf322-a996-47f0-a65e-95e6c632d568.jpg" width="2320" height="3088">
+    <tag label="type_6" source="manual">
+    </tag>
+  </image>
+  <image id="35" name="images/eu.ce122d94-ebfa-44de-952f-e25f024f45e3.jpg" width="4000" height="3000">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="36" name="images/eu.eac2f17c-d6ef-4e6f-9486-01dbf5012f10.jpg" width="4032" height="3024">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="37" name="images/eu.f5ffb876-0454-4c8f-9515-2a87110fd635.jpg" width="2448" height="3264">
+    <tag label="type_6" source="manual">
+    </tag>
+  </image>
+  <image id="38" name="images/eu.f673d1c2-9580-49a9-9c35-45d8278c5fc2.jpg" width="3120" height="4160">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="39" name="images/eu.f6abef78-e03d-43d3-a4b9-64594ac83496.jpg" width="1932" height="2576">
+    <tag label="type_5" source="manual">
+    </tag>
+  </image>
+  <image id="40" name="images/eu.f7beccef-60d5-4f3a-b913-eaea5d40f466.jpg" width="3880" height="5184">
+    <tag label="type_7" source="manual">
+    </tag>
+  </image>
+  <image id="41" name="images/eu.fd8a0281-72d0-4c31-866a-1b41e03c244e.jpg" width="3120" height="4160">
+    <tag label="type_4" source="manual">
+    </tag>
+  </image>
+</annotations>
+
+

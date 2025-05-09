@@ -1,0 +1,310 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+      <!-- header section starts -->
+
+<header class="fixed-top py-3">
+
+    <div class=" d-flex align-items-center justify-content">
+&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   
+        <a href="#" class="logo">Skin Care<span class="fas fa-hospital-user"></span></a>
+
+        <div id="menu-bar" class="fas fa-bars d-inline-block d-md-none"></div>
+
+        <nav class="nav">
+
+            &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;      &nbsp;     
+            <a href="/npbhai">home</a>
+            <a href="/about">about</a>
+            <a href="/skin">skin disease</a>
+            <a href="/np">check my skin type</a>
+            <a href="/team">Our Team</a>
+            <a href="/contect">contact</a>
+           
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eaeaea;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 550px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #140202;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    
+    
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: gray;
+}
+    </style>
+  </head>
+<!--Font Awesome CDN-->
+
+
+
+<body  style="background-color: #f8f8fe">
+
+
+    
+<div class="container">
+
+
+    </header>
+
+    <div class="slide">
+
+        
+        <div class="item" style="background-image: url(https://my.clevelandclinic.org/-/scassets/images/org/health/articles/12419-vitiligo);">
+            <div class="content">
+                <div class="name">VITILOGA</div>
+                <div class="des">Vitiligo is a condition where the skin loses its pigment due to the destruction of melanocytes. 
+                    While there’s no definitive cure, various treatments can help restore pigmentation, or improve the skin’s appearance.</div>
+                <a href="http://www.leucodermatreatment.in/?msclkid=78262df426991c1cfc864a9f80690446"><button>SEE MORE</button></a>    
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://dermskinhealth.com/wp-content/uploads/2022/06/melasma-hero.jpeg);">
+            <div class="content">
+                <div class="name">MELESEMA</div>
+                <div class="des">Melasma is a common skin condition characterized by brown or grayish patches, 
+                    often appearing on the face, caused by sun exposure, hormonal changes, or genetic factors.Sun exposure is the most significant.</div>
+                <a href="https://www.verywellhealth.com/treating-melasma-4589536" class="card__button"><button>SEE MORE</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://images-1.eucerin.com/~/media/eucerin/special/dermopure/articles/110_article_01/euc-int_dermopure_article_110_aknearten_image_08-normal.jpg);">
+            <div class="content">
+                <div class="name">ACNE</div>
+                <div class="des">Acne treatment varies depending on its severity, 
+                    skin type underlying and they classified into atrophic scars 
+                    (depressions in the skin like icepick, rolling, or boxcar scars) and hypertrophic scars (raised scars).</div>
+                    <a href="https://www.healthline.com/health/skin/acne#risk-factors" class="card__button"><button>SEE MORE</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://th.bing.com/th/id/OIP.egG2coXEkea5TSMtRj_w7gHaEz?rs=1&pid=ImgDetMain);">
+            <div class="content">
+                <div class="name" style="color: aliceblue;">ALOPECIA-AREATA</div>
+                <div class="des" style="color: aliceblue;">Alopecia Areata is an autoimmune condition in which the immune system mistakenly attacks hair follicles, leading to sudden and often patchy hair loss on the scalp, face, or other parts of the body. While the exact cause is not fully understood, it is believed to result from a combination of genetic predisposition.</div>
+                <a href="https://www.healthline.com/health/alopecia-treatment"><button>SEE MORE</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://th.bing.com/th/id/OIP.d95o5LHKfAw3Y96NvusZIAHaEK?rs=1&pid=ImgDetMain);">
+            <div class="content">
+                <div class="name">DRY</div>
+                <div class="des">Dry skin, also known as xerosis, occurs when the skin lacks adequate moisture and can result in flakiness, itchiness, and tightness. To treat and prevent it, moisturizing regularly with thick, fragrance-free creams or ointments, such as those containing ceramides or petroleum jelly, is essential.</div>
+              <a href="https://www.aad.org/public/everyday-care/skin-care-basics/dry/dermatologists-tips-relieve-dry-skin"><button>SEE MORE</button></a>  
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://th.bing.com/th/id/OIP.zRhp8bBL7Ih8UZ8_MQa1SgHaE6?rs=1&pid=ImgDetMain);">
+            <div class="content">
+                <div class="name">WARTS</div>
+                <div class="des">Warts are small, rough growths caused by the human papillomavirus (HPV), and their treatment depends on their size, location, and persistence. Over-the-counter remedies, such as salicylic acid in the form of gels or patches, can help dissolve the wart gradually, especially when applied after soaking the wart in warm water.</div>
+                <a href="https://www.mayoclinic.org/diseases-conditions/common-warts/diagnosis-treatment/drc-20371131"></a><button>SEE MORE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+</div>
+<script>
+    let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="fixed-top py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">Skin Care <span class="fas fa-hospital-user"></span></a>
+            <div id="menu-bar" class="fas fa-bars d-inline-block d-md-none"></div>
+            <nav class="nav">
+                <a href="/npbhai">home</a>
+                <a href="/about">about</a>
+                <a href="/skin">skin disease</a>
+                <a href="/np">check my skin type</a>
+                <a href="/team">Our Team</a>
+                <a href="/contect">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home" style="background-color: #f8f8fe">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center pt-5">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/istockphoto-1248674930-612x612-removebg-preview.png') }}" class="w-100" alt="">
+                </div>
+                <div class="col-md-6 content text-center text-md-start pl-md-5">
+                    <span>your skin is your best accessory</span>
+                    <h3>protect yourself from skin disease</h3>
+                    <a href="https://my.clevelandclinic.org/health/articles/10978-skin" class="link-btn">learn more</a>
+                    <a href="/k" class="link-btn">track</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email input for individual message lookup -->
+   
+
+    <!-- Features Section -->
+    <section class="features py-5" id="features" style="background:#fff">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Features</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <span class="fas fa-camera fa-2x mb-3 text-primary"></span>
+                            <h5 class="card-title">AI Skin Analysis</h5>
+                            <p class="card-text">Upload an image and let our AI detect possible skin conditions instantly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <span class="fas fa-user-md fa-2x mb-3 text-success"></span>
+                            <h5 class="card-title">Expert Advice</h5>
+                            <p class="card-text">Get tips and recommendations from certified dermatologists and experts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <span class="fas fa-shield-alt fa-2x mb-3 text-danger"></span>
+                            <h5 class="card-title">Privacy First</h5>
+                            <p class="card-text">Your data and images are safe with us and never shared with third parties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5" id="testimonials" style="background:#f8f8fe">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Users Say</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"This site helped me identify my skin issue quickly and easily! Highly recommended."</p>
+                            <h6 class="card-subtitle text-muted">- Priya S.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">"The expert advice section is a lifesaver. Thank you for this amazing resource!"</p>
+                            <h6 class="card-subtitle text-muted">- Rahul M.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5" id="faq" style="background:#fff">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            Is my data safe on this site?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, your data and images are encrypted and never shared with third parties.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Can I use the service for free?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, all features are free to use for everyone.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            How accurate is the AI analysis?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our AI is trained on thousands of images and provides highly accurate results, but always consult a dermatologist for serious concerns.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" style="background: transparent;">
+        <div class="container">
+            <div class="row align-items-center flex-wrap-reverse">
+                <div class="col-md-6 content">
+                    <h3><b>HOW TO CHECK SKIN-DISEASES ?</b></h3>
+                    <ul>
+                        <li>In the navigation bar, click on the "CHECK MY SKIN TYPE" button.</li>
+                        <li>Click on "CHOOSE A FILE" and select an image of your disease.</li>
+                        <li>Click on the "Submit" button.</li>
+                        <li>The website will provide the disease name based on your image.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/location.jpg') }}" class="w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CENTER  style="background-color:  #f8f8fe"  > 
+        <h1 class="heading" > <span><B>REASON TO CHOOSE THIS WEBSITE</B></span> </h1>
+        <section class="about" id="about">
+           
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-97713431-337e-4228-a93e-25c6d7796732" data-elfsight-app-lazy></div>
+    
+        
+        </section>
+        </CENTER>
+
+    <!-- Message Button and Popup Modal -->
+    <!-- The Modal -->
+    <div id="messageModal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+      <div style="background-color: #fff; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 300px; border-radius: 8px; position: relative;">
+        <span id="closeModal" style="color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+        <h2>Message</h2>
+        <p id="popupMessage">{{ latest_message if latest_message else 'No message from admin yet.' }}</p>
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var modal = document.getElementById('messageModal');
+      var btn = document.getElementById('messageBtn');
+      var span = document.getElementById('closeModal');
+      var popupMessage = document.getElementById('popupMessage');
+      var emailForm = document.getElementById('emailLookupForm');
+      var userEmailInput = document.getElementById('userEmail');
+
+      // Helper to fetch individual message
+      async function fetchIndividualMessage(email) {
+        const response = await fetch(`/get_individual_message?email=${encodeURIComponent(email)}`);
+        if (response.ok) {
+          const data = await response.json();
+          return data.message;
+        }
+        return null;
+      }
+
+      if(btn) {
+        btn.onclick = function() {
+          // If email entered, check for individual message
+          const userEmail = userEmailInput ? userEmailInput.value : '';
+          if(userEmail) {
+            fetchIndividualMessage(userEmail).then(function(msg) {
+              popupMessage.textContent = msg || 'No message for this email.';
+              modal.style.display = "block";
+            });
+          } else {
+            modal.style.display = "block";
+          }
+        }
+      }
+      if(span) {
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      if(emailForm) {
+        emailForm.onsubmit = function(e) {
+          e.preventDefault();
+          const userEmail = userEmailInput.value;
+          if(btn) btn.click(); // Trigger popup with message
+        }
+      }
+    });
+    </script>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center text-center text-sm-start">
+                <div class="box p-3 m-2">
+                    <h3>Skin Care</h3>
+                    <p>Healthy skin needs proper hydration, a balanced diet, and sun protection.</p>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Quick Links</h3>
+                    <a href="/npbhai">home</a>
+                    <a href="/about">about</a>
+                    <a href="/skin">skin disease</a>
+                    <a href="/np">check my skin type</a>
+                    <a href="/team">Our Team</a>
+                    <a href="/contect">contact</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Connect with us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">linkedin</a>
+                    <a href="#">twitter</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Contact Info</h3>
+                    <a href="#">+123-456-9999</a>
+                    <a href="#">+111-222-3333</a>
+                    <a href="#">xx@gmail.com</a>
+                    <a href="#">Delhi, India - 110000</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Newsletter</h3>
+                    <form action="/subscribe" method="post" class="d-flex flex-column">
+                        <input type="email" name="email" class="form-control mb-2" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-outline-primary">Subscribe</button>
+                        <button id="messageBtn" type="button" class="btn btn-outline-success ms-2" style="margin-left:10px;">Message</button>
+                    </form>
+                    {% if message %}
+                    <div class="alert alert-success mt-2">{{ message }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="credit">Created by <span>Krishna Modhavadiya & Merja Neel</span> | All Rights Reserved</div>
+        </div>
+    </section>
+
+    <!-- GSAP Animations -->
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Header animation
+          
+
+            // Home section animation
+            gsap.from(".home img", { x: -500, opacity: 0, duration: 3 });
+            gsap.from(".home .content span", { y: 200, opacity: 0, duration: 2, delay: 0.5 });
+            gsap.from(".home .content h3", { y: 200, opacity: 0, duration: 2, delay: 0.7 });
+            gsap.from(".home .content a", { scale: 0.5, opacity: 0, duration: 1, stagger: 0.2, delay: 1 });
+
+            // About section animation
+            gsap.from(".about .content", { x: -500, opacity: 0, duration: 2, scrollTrigger: {
+                trigger: ".about", 
+                start: "top 80%"
+            }});
+            gsap.from(".about img", { x: 700, opacity: 0, duration: 2, scrollTrigger: {
+                trigger: ".about",
+                start: "top 80%"
+            }});
+
+            // Footer animation
+            gsap.from(".footer .box", { scale: 0.8, opacity: 0, duration: 3, stagger: 0.2, scrollTrigger: {
+                trigger: ".footer",
+                start: "top 80%"
+            }});
+
+            // Scroll-triggered animation for all sections
+            gsap.utils.toArray("section").forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/12/12/12/20241212125942-OYLX4SKG.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        .about {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #3494e6, #ec6ead, #3494e6, #ec6ead);
+            background-size: 400% 400%;
+            animation: animate 7s infinite alternate;
+        }
+        .footer {
+            background: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="fixed-top py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">Skin Care <span class="fas fa-hospital-user"></span></a>
+            <div id="menu-bar" class="fas fa-bars d-inline-block d-md-none"></div>
+            <nav class="nav">
+                <a href="/npbhai">home</a>
+                <a href="/about">about</a>
+                <a href="/skin">skin disease</a>
+                <a href="/np">check my skin type</a>
+                <a href="/team">Our Team</a>
+                <a href="/contect">contact</a>
+            </nav>
+        </div>
+    </header>
+<br>
+<br>
+    <!-- About Section -->
+    <section class="about" id="about" style="background: transparent;">
+        <div class="container">
+            <div class="row align-items-center flex-wrap-reverse">
+                <div class="col-md-6 content">
+                    <h3><b>What are Skin Diseases?</b></h3>
+                    <p>Skin diseases are conditions that affect your skin. These diseases may cause rashes, inflammation, itchiness, or other skin changes. Some skin conditions may be genetic, while lifestyle factors may cause others. Skin disease treatment may include medications, creams or ointments, or lifestyle changes.</p>
+                    <p>Skin diseases can range from mild to severe and may be temporary or permanent. Common examples include acne, eczema, psoriasis, vitiligo, and warts. Early diagnosis and proper care are crucial for effective management. Skin health is not just about appearance—it is a reflection of your overall health and can be affected by nutrition, hygiene, stress, and environmental factors.</p>
+                    <ul>
+                        <li><b>Prevention Tips:</b> Maintain good hygiene, use sunscreen, stay hydrated, and avoid harsh chemicals.</li>
+                        <li><b>Statistics:</b> According to the World Health Organization, skin diseases are among the most common human health disorders, affecting nearly 900 million people worldwide at any time.</li>
+                        <li><b>Why Skin Health Matters:</b> Healthy skin protects you from infections, regulates temperature, and enables the sensations of touch, heat, and cold.</li>
+                    </ul>
+                    <p>Our mission is to educate, support, and empower everyone to take better care of their skin. Explore our website for tips, expert advice, and tools to help you achieve healthy, glowing skin.</p>
+                    <a href="https://my.clevelandclinic.org/health/diseases/21573-skin-diseases#:~:text=Skin%20diseases%20are%20conditions%20that,or%20ointments%2C%20or%20lifestyle%20changes." class="link-btn">learn more</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/conifer-1127-removebg-preview.png') }}" class="w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center text-center text-sm-start">
+                <div class="box p-3 m-2">
+                    <h3>Skin Care</h3>
+                    <p>Healthy skin needs proper hydration, a balanced diet, and sun protection.</p>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>quick links</h3>
+                    <a href="/npbhai">home</a>
+                    <a href="/about">about</a>
+                    <a href="/skin">skin disease</a>
+                    <a href="/np">check my skin type</a>
+                    <a href="/team">Our Team</a>
+                    <a href="/contect">contact</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Connect with us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">linkedin</a>
+                    <a href="#">twitter</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>contact info</h3>
+                    <a href="#">+123-456-9999</a>
+                    <a href="#">+111-222-3333</a>
+                    <a href="#">xx@gmail.com</a>
+                    <a href="#">delhi, india - 110000</a>
+                </div>
+            </div>
+            <div class="credit"> created by <span>Krishna Modhavadiya & Merja Neel</span> | all rights reserved </div>
+        </div>
+    </section>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // GSAP Animation for Header
+      
+
+        // Animation for About Section
+        gsap.from(".about .content", {
+            scrollTrigger: {
+                trigger: ".about",
+                start: "top center",
+            },
+            x: -700,
+            opacity: 5,
+            duration: 3.5
+        });
+
+        gsap.from(".about img", {
+            scrollTrigger: {
+                trigger: ".about",
+                start: "top center",
+            },
+            x: 700,
+            opacity: 5,
+            duration: 4
+        });
+
+        // Footer Animation
+        gsap.from(".footer .box", {
+            scrollTrigger: {
+                trigger: ".footer",
+                start: "top bottom",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 3,
+            stagger: 0.5
+        });
+    </script>
+       <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+       <script src="https://files.bpcontent.cloud/2024/12/12/12/20241212125942-OYLX4SKG.js"></script>
+</body>
+</html>

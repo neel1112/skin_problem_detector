@@ -1,0 +1,234 @@
+/* Root variables */
+:root{
+    --main-color: #926ad4;
+    --black: #244361;
+    --box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+/* Reset and base styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    scroll-padding-top: 60px;
+    perspective: 1000px;
+}
+
+section{
+    padding: 20px 0;
+    transform-style: preserve-3d;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section:nth-child(odd){
+    background: rgb(215, 27, 27);
+    transform: rotateX(2deg) translateZ(-10px);
+}
+
+/* Heading styling */
+.heading{
+    text-align: center;
+    padding: 0 15px;
+    padding-bottom: 5px;
+    color: var(--black);
+    font-size: 30px;
+    transform: translateZ(30px);
+    animation: popIn 1s ease-in-out;
+}
+
+.heading span{
+    color: var(--main-color);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.link-btn{
+    display: inline-block;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transform: scale(1) rotateY(0deg);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.link-btn:hover{
+    color: #fff;
+    background: #ff00ff;
+    transform: scale(1.1) rotateY(10deg);
+}
+
+/* Header styling */
+header{
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    transform: translateZ(10px);
+    animation: slideDown 1s ease-in-out;
+}
+
+header .logo{
+    font-size: 20px;
+    color: var(--black);
+}
+
+header .logo span{
+    color: var(--main-color);
+}
+
+header .nav a{
+    margin-left: 3px;
+    border-radius: 50px;
+    color: var(--black);
+    padding: 5px 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+header .nav a:hover{
+    background: var(--main-color);
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+#menu-bar{
+    color: var(--black);
+    cursor: pointer;
+    font-size: 25px;
+    transition: transform 0.2s linear;
+}
+
+/* Home section styling */
+.home{
+    min-height: 100vh;
+    background: url(/Images/home-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: rotateX(5deg);
+    animation: zoomIn 1.5s ease;
+}
+
+.home .content span{
+    color: var(--main-color);
+    font-size: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.home .content h3{
+    color: var(--black);
+    font-size: 50px;
+    font-weight: bolder;
+    animation: popIn 1s ease-out;
+}
+
+/* Button with animation */
+#custom-button, #submit-button{
+    padding: 10px;
+    color: white;
+    background-color: var(--main-color);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 50px;
+    max-width: 300px;
+    font-size: 0.875em;
+    display: block;
+    left: -60px;
+    margin-top: 35px;
+    cursor: pointer;
+    transform: perspective(500px) translateZ(10px) rotateX(0deg);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+#custom-button:hover, #submit-button:hover{
+    background-color: magenta;
+    transform: rotateX(10deg);
+}
+
+/* Experts section */
+.experts .box{
+    width: 260px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px) translateZ(20px);
+    animation: popIn 1.5s ease;
+}
+
+.experts .box:hover{
+    transform: translateZ(40px) rotateY(15deg);
+}
+
+.experts .box img{
+    background: #f8f8fe;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.experts .box h3{
+    font-size: 22px;
+    margin: 2px 0;
+    color: var(--black);
+}
+
+.experts .box span{
+    font-size: 15px;
+    color: var(--main-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateZ(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}

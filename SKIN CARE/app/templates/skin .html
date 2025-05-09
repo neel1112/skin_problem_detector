@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="fixed-top py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">Skin Care <span class="fas fa-hospital-user"></span></a>
+            <div id="menu-bar" class="fas fa-bars d-inline-block d-md-none"></div>
+            <nav class="nav">
+                <a href="/npbhai">home</a>
+                <a href="/about">about</a>
+                <a href="/skin">skin disease</a>
+                <a href="/np">check my skin type</a>
+                <a href="/team">Our Team</a>
+                <a href="/contect">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <br><br><br><br>
+
+    <!-- Prevent Section -->
+    <section class="prevent" id="prevent">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="box p-4 m-2 disease-card" data-title="Acne" data-info='
+                    <h4>Overview</h4>
+                    <p>Acne is a common skin condition affecting millions of people worldwide, especially adolescents and young adults. It occurs when hair follicles become clogged with oil and dead skin cells, leading to whiteheads, blackheads, pimples, and sometimes cysts or nodules. While not life-threatening, acne can cause emotional distress, scarring, and a significant impact on self-esteem.</p>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Excess oil (sebum) production by sebaceous glands</li>
+                        <li>Clogged hair follicles due to oil and dead skin cells</li>
+                        <li>Bacterial growth (Propionibacterium acnes)</li>
+                        <li>Hormonal changes (puberty, menstruation, pregnancy)</li>
+                        <li>Certain medications (corticosteroids, lithium)</li>
+                        <li>Diet (high-glycemic foods, dairy in some people)</li>
+                        <li>Stress and genetics</li>
+                    </ul>
+                    <h4>Symptoms</h4>
+                    <ul>
+                        <li>Whiteheads (closed clogged pores)</li>
+                        <li>Blackheads (open clogged pores)</li>
+                        <li>Papules (small red, tender bumps)</li>
+                        <li>Pustules (pimples with pus at tips)</li>
+                        <li>Nodules and cystic lesions (painful, deep lumps)</li>
+                        <li>Scarring and dark spots after lesions heal</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Topical treatments: benzoyl peroxide, salicylic acid, retinoids, antibiotics</li>
+                        <li>Oral medications: antibiotics, hormonal agents (birth control), isotretinoin</li>
+                        <li>Procedures: chemical peels, laser therapy, drainage of large cysts</li>
+                        <li>Proper skincare: gentle cleansing, non-comedogenic products</li>
+                    </ul>
+                    <h4>Prevention</h4>
+                    <ul>
+                        <li>Wash face twice daily with mild cleanser</li>
+                        <li>Avoid harsh scrubbing and picking at pimples</li>
+                        <li>Use oil-free, non-comedogenic makeup and sunscreen</li>
+                        <li>Maintain a healthy diet and manage stress</li>
+                    </ul>
+                    <h4>Cost</h4>
+                    <p>Treatment costs for acne typically range from 500-600 Rs for basic topical therapies and consultations. Advanced treatments or long-term medication may cost more. Consult a dermatologist for personalized advice and the most effective treatment plan.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>If over-the-counter treatments don’t work, if acne is severe or causing scarring, or if it’s affecting your mental health, see a dermatologist. Early intervention can prevent complications and improve outcomes.</p>'>
+                    <img src="{{ url_for('static', filename='images/dry.png') }}" alt="">
+                    <h3 >Acne</h3>
+                    <p>Acne is a skin condition that occurs when your hair follicles become plugged with oil and dead skin cells. It causes whiteheads, blackheads or pimples. Acne is most common among teenagers, though it affects people of all ages.</p>
+                </div>
+    
+                <div class="box p-4 m-2 disease-card" data-title="Acne Scars" data-info='
+                    <h4>Overview</h4>
+                    <p>Acne scars are permanent textural changes and indentations that occur on the skin as a result of severe acne. They can be distressing and affect self-confidence, but many treatments are available to reduce their appearance.</p>
+                    <h4>Types of Acne Scars</h4>
+                    <ul>
+                        <li><b>Atrophic scars:</b> Depressed scars, including ice pick, boxcar, and rolling scars</li>
+                        <li><b>Hypertrophic/keloid scars:</b> Raised, thickened tissue</li>
+                        <li><b>Post-inflammatory hyperpigmentation:</b> Dark spots left after acne heals</li>
+                    </ul>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Inflammation damages skin tissue during acne outbreaks</li>
+                        <li>Delayed or improper treatment of acne</li>
+                        <li>Genetic predisposition</li>
+                        <li>Picking or squeezing pimples</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Topical treatments: retinoids, alpha hydroxy acids</li>
+                        <li>Chemical peels and microdermabrasion</li>
+                        <li>Laser resurfacing and microneedling</li>
+                        <li>Fillers for deep scars</li>
+                        <li>Subcision and punch excision for severe scars</li>
+                    </ul>
+                    <h4>Prevention</h4>
+                    <ul>
+                        <li>Treat acne early and effectively</li>
+                        <li>Avoid picking or squeezing lesions</li>
+                        <li>Use sunscreen to prevent darkening of scars</li>
+                    </ul>
+                    <h4>Cost</h4>
+                    <p>Basic topical treatments and chemical peels may cost 500-600 Rs per session. Advanced procedures like laser therapy or microneedling are more expensive. Consult a dermatologist for a tailored plan.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>If scars are affecting your confidence or quality of life, see a dermatologist for professional advice and treatment options.</p>'>
+                    <img src="{{ url_for('static', filename='images/acne.png') }}" alt="">
+                    <h3>Acne Scars</h3>
+                    <p>Acne scars are usually the result of inflamed blemishes caused by skin pores engorged with excess oil, dead skin cells and bacteria. The pore swells, causing a break in the follicle wall. Shallow lesions are usually minor and heal quickly.</p>
+                </div>
+                <div class="box p-4 m-2 disease-card" data-title="Acanthosis nigricans" data-info='
+                    <h4>Overview</h4>
+                    <p>Acanthosis nigricans is a skin disorder characterized by dark, thick, velvety patches in body folds and creases, most commonly in the armpits, neck, and groin. It is not a disease itself but a sign of an underlying health problem, often related to insulin resistance, obesity, or hormonal disorders.</p>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Insulin resistance (common in type 2 diabetes and obesity)</li>
+                        <li>Hormonal disorders (polycystic ovary syndrome, thyroid issues)</li>
+                        <li>Certain medications (steroids, birth control pills)</li>
+                        <li>Genetic factors</li>
+                        <li>Rarely, underlying cancer (especially of the stomach or liver)</li>
+                    </ul>
+                    <h4>Symptoms</h4>
+                    <ul>
+                        <li>Dark, velvety skin patches</li>
+                        <li>Thickened, sometimes itchy skin</li>
+                        <li>Commonly found in body folds (neck, armpits, groin)</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Treat underlying cause (weight loss, manage diabetes)</li>
+                        <li>Topical treatments: retinoids, ammonium lactate, urea creams</li>
+                        <li>Laser therapy for cosmetic improvement</li>
+                    </ul>
+                    <h4>Prevention</h4>
+                    <ul>
+                        <li>Maintain healthy weight</li>
+                        <li>Manage blood sugar levels</li>
+                        <li>Regular health checkups</li>
+                    </ul>
+                    <h4>Cost</h4>
+                    <p>Consultation and basic topical therapy typically cost 500-600 Rs. Managing the underlying condition may require additional medical expenses.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>Sudden onset or rapid spreading of dark patches, especially in non-obese adults, should prompt urgent medical evaluation to rule out serious underlying conditions.</p>'>
+                    <img src="{{ url_for('static', filename='images/Normal.png') }}" alt="">
+                    <h3>Acanthosis nigricans</h3>
+                    <p>Acanthosis nigricans is a skin condition that causes a dark discoloration in body folds and creases. It typically affects the armpits, groin and neck. Acanthosis nigricans is a skin condition characterized by areas of dark, velvety discoloration in body folds and creases.</p>
+                </div>
+                <div class="box p-4 m-2 disease-card" data-title="Alopecia areata" data-info='
+                    <h4>Overview</h4>
+                    <p>Alopecia areata is an autoimmune disorder that causes hair loss in small, round patches on the scalp and other areas of the body. It can affect anyone, regardless of age or gender, and often develops suddenly. The condition is not contagious or life-threatening, but it can cause significant emotional distress.</p>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Autoimmune reaction: The immune system attacks hair follicles</li>
+                        <li>Genetic predisposition</li>
+                        <li>Stress and environmental triggers</li>
+                    </ul>
+                    <h4>Symptoms</h4>
+                    <ul>
+                        <li>Sudden hair loss in round or oval patches</li>
+                        <li>Tingling or itching in affected areas</li>
+                        <li>Nail changes (pitting, ridges)</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Corticosteroid injections or topical creams</li>
+                        <li>Immunotherapy (topical or oral)</li>
+                        <li>Minoxidil (topical solution)</li>
+                        <li>Wigs or hairpieces for cosmetic coverage</li>
+                    </ul>
+                    <h4>Prognosis</h4>
+                    <p>Hair may regrow spontaneously in some cases, but relapses are common. Severe cases may progress to total hair loss on the scalp (alopecia totalis) or body (alopecia universalis).</p>
+                    <h4>Cost</h4>
+                    <p>Basic treatments like topical corticosteroids or minoxidil cost about 500-600 Rs per month. Advanced therapies and cosmetic solutions may cost more.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>If you notice sudden or extensive hair loss, consult a dermatologist promptly for diagnosis and management.</p>'>
+                    <img src="{{ url_for('static', filename='images/oily.png') }}" alt="">
+                    <h3>Alopecia areata</h3>
+                    <p>Alopecia areata is an autoimmune disorder that causes your hair to come out, often in clumps the size and shape of a quarter. The amount of hair loss is different in everyone. Some people lose it only in a few spots. Others lose a lot. </p>
+                </div>
+                <div class="box p-4 m-2 disease-card" data-title="Melasma" data-info='
+                    <h4>Overview</h4>
+                    <p>Melasma is a common pigmentation disorder that causes brown or blue-gray patches, usually on the face. It is more common in women, especially during pregnancy or with hormonal changes, and in people with darker skin types. Melasma is not harmful but can be cosmetically distressing.</p>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Sun exposure (UV radiation)</li>
+                        <li>Hormonal changes (pregnancy, oral contraceptives, hormone therapy)</li>
+                        <li>Genetic predisposition</li>
+                        <li>Certain medications and cosmetics</li>
+                    </ul>
+                    <h4>Symptoms</h4>
+                    <ul>
+                        <li>Symmetrical brown or grayish patches on the cheeks, forehead, nose, or upper lip</li>
+                        <li>No physical discomfort, only cosmetic concern</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Topical creams: hydroquinone, tretinoin, corticosteroids</li>
+                        <li>Chemical peels and microdermabrasion</li>
+                        <li>Laser therapy (with caution)</li>
+                        <li>Strict sun protection (broad-spectrum sunscreen, hats)</li>
+                    </ul>
+                    <h4>Prevention</h4>
+                    <ul>
+                        <li>Avoid direct sun exposure</li>
+                        <li>Use sunscreen daily</li>
+                        <li>Manage hormonal triggers where possible</li>
+                    </ul>
+                    <h4>Cost</h4>
+                    <p>Most topical treatments and consultations cost 500-600 Rs per month. Advanced procedures are more expensive. Consistent sun protection is essential for lasting results.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>If pigmentation is spreading, persistent, or causing emotional distress, consult a dermatologist for evaluation and tailored treatment.</p>'>
+                    <img src="{{ url_for('static', filename='images/Normal.png') }}" alt="">
+                    <h3>Melasma</h3>
+                    <p>Melasma is a skin condition characterized by brown or blue-gray patches or freckle-like spots. It's often called the “mask of pregnancy.” Melasma happens because of overproduction of the cells that make the color of your skin. It is common, harmless and some treatments may help.</p>
+                </div>
+                <div class="box p-4 m-2 disease-card" data-title="Vitiligo" data-info='
+                    <h4>Overview</h4>
+                    <p>Vitiligo is a chronic skin disorder that causes patches of skin to lose their pigment. It occurs when melanocytes, the cells responsible for skin color, are destroyed. Vitiligo can affect any part of the body, including hair and mucous membranes. It is not contagious or life-threatening, but can be emotionally challenging.</p>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Autoimmune response: the body attacks its own pigment cells</li>
+                        <li>Genetic predisposition</li>
+                        <li>Environmental triggers (sunburn, chemical exposure)</li>
+                    </ul>
+                    <h4>Symptoms</h4>
+                    <ul>
+                        <li>White or depigmented patches on the skin</li>
+                        <li>Premature whitening of hair, eyelashes, eyebrows</li>
+                        <li>Loss of color inside the mouth or nose</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Topical corticosteroids and calcineurin inhibitors</li>
+                        <li>Phototherapy (narrowband UVB)</li>
+                        <li>Depigmentation for widespread cases</li>
+                        <li>Cosmetic camouflage (makeup, self-tanners)</li>
+                    </ul>
+                    <h4>Prevention & Coping</h4>
+                    <ul>
+                        <li>Protect skin from sunburn</li>
+                        <li>Use sunscreen and cover affected areas</li>
+                        <li>Support groups and counseling for emotional impact</li>
+                    </ul>
+                    <h4>Cost</h4>
+                    <p>Basic treatments and consultations are usually 500-600 Rs per month. Phototherapy and advanced therapies may cost more. Results vary and require ongoing care.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>If you notice new or spreading white patches, see a dermatologist for diagnosis and treatment options.</p>'>
+                    <img src="{{ url_for('static', filename='images/Sensitive.png') }}" alt="">
+                    <h3>Vitiligo</h3>
+                    <p>Vitiligo is a condition in which the skin loses its pigment cells (melanocytes). This can result in discolored patches in different areas of the body, including the skin, hair and mucous membranes. Vitiligo (vit-ih-LIE-go) is a disease that causes loss of skin color in patches.</p>
+                </div>
+                <div class="box p-4 m-2 disease-card" data-title="Warts" data-info='
+                    <h4>Overview</h4>
+                    <p>Warts are benign skin growths caused by human papillomavirus (HPV) infection. They can appear anywhere on the body but are most common on the hands, feet, and face. Warts are contagious and can spread by direct contact or through contaminated surfaces. While usually harmless, they can be unsightly and sometimes painful.</p>
+                    <h4>Types of Warts</h4>
+                    <ul>
+                        <li><b>Common warts:</b> Rough, raised bumps, usually on hands and fingers</li>
+                        <li><b>Plantar warts:</b> Hard, grainy growths on the soles of feet</li>
+                        <li><b>Flat warts:</b> Smooth, flat-topped lesions, often on face or legs</li>
+                        <li><b>Filiform warts:</b> Thread-like growths, often on the face</li>
+                        <li><b>Periungual warts:</b> Around fingernails and toenails</li>
+                    </ul>
+                    <h4>Causes</h4>
+                    <ul>
+                        <li>Infection with HPV through skin breaks</li>
+                        <li>Weakened immune system increases risk</li>
+                        <li>Direct contact with warts or contaminated surfaces</li>
+                    </ul>
+                    <h4>Treatment</h4>
+                    <ul>
+                        <li>Topical salicylic acid preparations</li>
+                        <li>Cryotherapy (freezing with liquid nitrogen)</li>
+                        <li>Minor surgery or laser removal for stubborn warts</li>
+                        <li>Immunotherapy for resistant cases</li>
+                    </ul>
+                    <h4>Prevention</h4>
+                    <ul>
+                        <li>Avoid direct contact with warts</li>
+                        <li>Keep skin clean and dry</li>
+                        <li>Do not share personal items (towels, razors)</li>
+                        <li>Wear footwear in public showers and pools</li>
+                    </ul>
+                    <h4>Cost</h4>
+                    <p>Basic treatments like salicylic acid or cryotherapy cost about 500-600 Rs per session. Multiple sessions may be needed. Consult a dermatologist for persistent or painful warts.</p>
+                    <h4>When to See a Doctor</h4>
+                    <p>If warts are painful, spreading, or not responding to treatment, seek medical advice. People with weakened immune systems should consult a doctor for any new skin growths.</p>'>
+                    <img src="{{ url_for('static', filename='images/acne.png') }}" alt="">
+                    <h3>warts</h3>
+                    <p>Warts are a type of skin infection caused by the human papillomavirus (HPV). The infection causes rough, skin-colored bumps to form on the skin. The virus is contagious. You can get warts from touching someone who has them.</p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for More Info -->
+    <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="moreInfoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content custom-popbox-rectangle">
+          <div class="modal-header">
+            <h5 class="modal-title" id="moreInfoModalLabel">Disease Info</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="moreInfoModalBody">
+            <!-- Info will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* Rectangle popbox/modal style */
+      .custom-popbox-rectangle {
+        border-radius: 10px;
+        box-shadow: 0 8px 40px rgba(60,60,120,0.20), 0 1.5px 4px rgba(60,60,120,0.10);
+        background: #fff;
+        max-width: 98vw;
+        width: 98vw;
+        margin: 1vw auto;
+        padding: 2.5rem 2.5rem 2rem 2.5rem;
+        animation: popbox-fade-in 0.5s cubic-bezier(0.4,0,0.2,1);
+        border: 1.5px solid #e6e6f0;
+        position: relative;
+        overflow-x: auto;
+        min-height: 120px;
+      }
+      .custom-popbox-rectangle .modal-header {
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(90deg, #f8f9ff 0%, #e9f0ff 100%);
+        padding: 1.2rem 2rem 0.8rem 2rem;
+      }
+      .custom-popbox-rectangle .modal-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #2a2a60;
+        letter-spacing: 0.01em;
+      }
+      .custom-popbox-rectangle .modal-body {
+        padding: 1.3rem 0 0 0;
+        font-size: 1.08rem;
+        color: #232347;
+        line-height: 1.7;
+      }
+      .custom-popbox-rectangle .btn-close {
+        outline: none;
+        box-shadow: none;
+        filter: brightness(0.7);
+        transition: filter 0.15s;
+      }
+      .custom-popbox-rectangle .btn-close:hover {
+        filter: brightness(1);
+      }
+      .modal-backdrop.show {
+        opacity: 0.7;
+        backdrop-filter: blur(3px);
+        transition: opacity 0.4s;
+      }
+      @media (max-width: 900px) {
+        .custom-popbox-rectangle {
+          max-width: 100vw;
+          width: 100vw;
+          margin: 0;
+          padding: 1rem 0.5rem 1rem 0.5rem;
+        }
+        .custom-popbox-rectangle .modal-header {
+          padding: 1rem 1rem 0.5rem 1rem;
+        }
+      }
+      @keyframes popbox-fade-in {
+        0% { transform: scale(0.96) translateY(32px); opacity: 0; }
+        100% { transform: scale(1) translateY(0); opacity: 1; }
+      }
+    </style>
+    <script>
+      // Extra JS for better popbox/modal effects
+      document.addEventListener('DOMContentLoaded', function() {
+        var modalEl = document.getElementById('moreInfoModal');
+        if (modalEl) {
+          // ESC key closes modal
+          modalEl.addEventListener('shown.bs.modal', function () {
+            document.addEventListener('keydown', escListener);
+          });
+          modalEl.addEventListener('hidden.bs.modal', function () {
+            document.removeEventListener('keydown', escListener);
+          });
+          function escListener(e) {
+            if (e.key === 'Escape') {
+              var modal = bootstrap.Modal.getInstance(modalEl);
+              if (modal) modal.hide();
+            }
+          }
+          // Click outside (on backdrop) closes modal (Bootstrap does this by default, but ensure smooth fade)
+          modalEl.addEventListener('hide.bs.modal', function () {
+            modalEl.classList.remove('show');
+          });
+        }
+      });
+    </script>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center text-center text-sm-start">
+                <div class="box p-3 m-2">
+                    <h3>Skin Care</h3>
+                    <p>Healthy skin needs proper hydration, a balanced diet, and sun protection.</p>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Quick Links</h3>
+                    <a href="/npbhai">home</a>
+                    <a href="/about">about</a>
+                    <a href="/skin">skin disease</a>
+                    <a href="/np">check my skin type</a>
+                    <a href="/team">Our Team</a>
+                    <a href="/contect">contact</a>
+                </div>
+                 <div class="box p-3 m-2">
+                    <h3>Connect with us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">linkedin</a>
+                    <a href="#">twitter</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Contact Info</h3>
+                    <a href="#">+123-456-9999</a>
+                    <a href="#">+111-222-3333</a>
+                    <a href="#">xx@gmail.com</a>
+                    <a href="#">Delhi, India - 110000</a>
+                </div>
+            </div>
+            <div class="credit">Created by <span>Krishna Modhavadiya & Merja Neel</span> | All Rights Reserved</div>
+        </div>
+    </section>
+
+    <!-- GSAP Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Header animation
+            
+
+            // Prevent section animation
+            gsap.from(".prevent .box", { 
+                scale: 0.8, 
+                opacity: 0, 
+                duration: 3, 
+                stagger: 0.2, 
+                scrollTrigger: {
+                    trigger: ".prevent",
+                    start: "top 80%"
+                }
+            });
+
+            // Footer animation
+            gsap.from(".footer .box", { 
+                scale: 0.8, 
+                opacity: 0, 
+                duration: 2, 
+                stagger: 0.2, 
+                scrollTrigger: {
+                    trigger: ".footer",
+                    start: "top 80%"
+                }
+            });
+
+            // Disease Card Modal logic
+            const diseaseCards = document.querySelectorAll('.disease-card');
+            const modalTitle = document.getElementById('moreInfoModalLabel');
+            const modalBody = document.getElementById('moreInfoModalBody');
+            diseaseCards.forEach(card => {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    modalTitle.textContent = card.getAttribute('data-title');
+                    modalBody.innerHTML = card.getAttribute('data-info');
+                    var myModal = new bootstrap.Modal(document.getElementById('moreInfoModal'));
+                    myModal.show();
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/12/12/12/20241212125942-OYLX4SKG.js"></script>
+</body>
+</html>

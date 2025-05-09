@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="fixed-top py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">Skin Care<span class="fas fa-hospital-user"></span></a>
+            <div id="menu-bar" class="fas fa-bars d-inline-block d-md-none"></div>
+            <nav class="nav">
+                <a href="/npbhai">home</a>
+                <a href="/about">about</a>
+                <a href="/skin">skin disease</a>
+                <a href="/np">check my skin type</a>
+                <a href="/team">Our Team</a>
+                <a href="/contect">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container py-5">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="mb-3">Contact <span class="text-primary">Skin Care</span> Team</h2>
+                    <p class="lead">We value your feedback and inquiries! Please fill out the form below and our team will respond as soon as possible.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="/contact_submit" method="POST" style="background-color: white; border-radius: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.03); padding: 2rem;">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" id="location" name="location" class="form-control" placeholder="Where are you from?" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="number" class="form-label">Mobile Number</label>
+                                <input type="number" id="number" name="number" class="form-control" placeholder="Mobile Number" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Reason for Contact</label>
+                            <select id="reason" name="reason" class="form-select" required>
+                                <option value="" disabled selected>Select a reason</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Support">Support</option>
+                                <option value="Business Inquiry">Business Inquiry</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" placeholder="How can we help you?" class="form-control" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" name="callback" id="callback">
+                            <label class="form-check-label" for="callback">
+                                Please call me back
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" name="subscribe" id="subscribe">
+                            <label class="form-check-label" for="subscribe">
+                                Subscribe me to the Skin Care newsletter
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-primary w-100">Send Message</button>
+                        <div class="mt-4 text-center">
+                            <small class="text-muted">
+                                <i class="fas fa-envelope text-primary me-2"></i> info@skincare.com &nbsp; | &nbsp;
+                                <i class="fas fa-phone text-primary me-2"></i> +123-456-9999 &nbsp; | &nbsp;
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i> Delhi, India - 110000
+                            </small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center text-center text-sm-start">
+                <div class="box p-3 m-2">
+                    <h3>Skin Care</h3>
+                    <p>Healthy skin needs proper hydration, a balanced diet, and sun protection.</p>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Quick Links</h3>
+                    <a href="/npbhai">home</a>
+                    <a href="/about">about</a>
+                    <a href="/skin">skin disease</a>
+                    <a href="/np">check my skin type</a>
+                    <a href="/team">Our Team</a>
+                    <a href="/contect">contact</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Connect with us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">linkedin</a>
+                    <a href="#">twitter</a>
+                </div>
+                <div class="box p-3 m-2">
+                    <h3>Contact Info</h3>
+                    <a href="#">+123-456-9999</a>
+                    <a href="#">+111-222-3333</a>
+                    <a href="#">xx@gmail.com</a>
+                    <a href="#">Delhi, India - 110000</a>
+                </div>
+            </div>
+            <div class="credit">Created by <span>Krishna Modhavadiya & Merja Neel</span> | All Rights Reserved</div>
+        </div>
+    </section>
+
+    <!-- GSAP Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Header animation
+         
+
+            // Contact section animation
+            gsap.from(".contact .form-group", {
+                x: -700,
+                opacity: 1,
+                duration: 3.5,
+                scrollTrigger: {
+                    trigger: ".contact",
+                    start: "top 80%"
+                }
+            });
+
+            gsap.from(".contact iframe", {
+                x: 700,
+                opacity: 1,
+                duration: 4,
+                scrollTrigger: {
+                    trigger: ".contact",
+                    start: "top 80%"
+                }
+            });
+
+            // Footer animation
+            gsap.from(".footer .box", {
+                scale: 0.8,
+                opacity: 0,
+                duration: 4,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: ".footer",
+                    start: "top 80%"
+                }
+            });
+
+            // Scroll-triggered animation for all sections
+            gsap.utils.toArray("section").forEach(section => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/12/12/12/20241212125942-OYLX4SKG.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
