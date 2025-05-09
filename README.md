@@ -33,11 +33,11 @@ pip install -r requirements.txt
 Below are some screenshots showcasing the main features and UI of the Skin Care Web Application:
 
 ### Home Page
-[![Home Page](HOMESS.png)]
+![Home Page](HOMESS.png)
 
 ### About Page
 <!-- Add a real screenshot if available -->
-[Go to About Page](Images/ABOUTSS.png)
+[Go to About Page](ABOUTSS.png)
 
 ### Contact Page
 <!-- Add a real screenshot if available -->
