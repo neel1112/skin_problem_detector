@@ -131,5 +131,5 @@ This project is for educational purposes. Please contact the authors for other u
 ---
 
 ## Contact
-- Email: xx@gmail.com
+- Email: neelmerja@gmail.com
 - Location: Gujarat, India
