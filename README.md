@@ -1,5 +1,7 @@
 # Skin Care Web Application
 
+[▶️ Watch Demo Video](./)
+
 A comprehensive web application for skin care advice and skin disease prediction using deep learning. Users can upload images to detect skin conditions and get personalized recommendations. Built with Flask (Python), HTML/CSS/JS, and a PyTorch model.
 
 ---
